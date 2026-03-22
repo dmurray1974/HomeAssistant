@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "auth",
+  "data": {
+    "users": [
+      {
+        "id": "5904063baf6a43fb88d922276a5cee24",
+        "group_ids": [
+          "system-read-only"
+        ],
+        "is_owner": false,
+        "is_active": true,
+        "name": "Home Assistant Content",
+        "system_generated": true,
+        "local_only": false
+      },
+      {
+        "id": "660caf65985e4ab99cfca7d935e624d7",
+        "group_ids": [
+          "system-admin"
+        ],
+        "is_owner": true,
+        "is_active": true,
+        "name": "admin",
+        "system_generated": false,
+        "local_only": false
+      }
+    ],
+    "groups": [
+      {
+        "id": "system-admin",
+        "name": "Administrators"
+      },
+      {
+        "id": "system-users",
+        "name": "Users"
+      },
+      {
+        "id": "system-read-only",
+        "name": "Read Only"
+      }
+    ],
+    "credentials": [
+      {
+        "id": "7929aac1302246b59ff1437eee2aee80",
+        "user_id": "660caf65985e4ab99cfca7d935e624d7",
+        "auth_provider_type": "homeassistant",
+        "auth_provider_id": null,
+        "data": {
+          "username": "admin"
+        }
+      }
+    ],
+    "refresh_tokens": [
+      {
+        "id": "b98cdc8377b6431ca2213cbbbdb857b2",
+        "user_id": "5904063baf6a43fb88d922276a5cee24",
+        "client_id": null,
+        "client_name": null,
+        "client_icon": null,
+        "token_type": "system",
+        "created_at": "2026-02-14T15:33:18.439057+00:00",
+        "access_token_expiration": 1800.0,
+        "token": "ee43d605746d097321a0fd8c8d85bd702b4c449a63aa86a8562c8d2ab62698aa26a079aa11037056b353398fb74383640a951aa141442108ce392480c2ea2bfa",
+        "jwt_key": "a277be420c99bdf61edecfae41fb5ca9590375923b258ae53a29e22b9759fea252327ea426584f44622961ecf7b80bd1701dba88071a0f5cd13cda189834e7ab",
+        "last_used_at": null,
+        "last_used_ip": null,
+        "expire_at": null,
+        "credential_id": null,
+        "version": "2026.2.1"
+      },
+      {
+        "id": "d1627484f98844878b2ef3bf68dbc362",
+        "user_id": "660caf65985e4ab99cfca7d935e624d7",
+        "client_id": "http://localhost:8123/",
+        "client_name": null,
+        "client_icon": null,
+        "token_type": "normal",
+        "created_at": "2026-02-14T15:34:06.688630+00:00",
+        "access_token_expiration": 1800.0,
+        "token": "e6997f446b727675e56f4faf87f3cf9c3a5a396b3048ea43522af4bc9a930407c59f1b027747013f9c544a855c284041c21544b5a4688e6fa5ac9c84eb8f808f",
+        "jwt_key": "fd9f80f2b8ab44d0bf4bc55e3e22fb73e3ff743acaa0b8df13818f27587904e3f6147432b4e3480ce69c101374cfc0254b3066f722140e2181c5b22797f21c2d",
+        "last_used_at": "2026-02-18T16:54:08.721567+00:00",
+        "last_used_ip": "127.0.0.1",
+        "expire_at": 1779209648.721567,
+        "credential_id": "7929aac1302246b59ff1437eee2aee80",
+        "version": "2026.2.1"
+      }
+    ]
+  }
+}

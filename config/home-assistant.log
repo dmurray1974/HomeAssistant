@@ -1,0 +1,76 @@
+2026-02-18 18:14:50.282 ERROR (MainThread) [homeassistant.config_entries] Error setting up entry darren.w.murray@pm.me for hive
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/apyhiveapi/api/hive_auth_async.py", line 569, in refresh_token
+    result = await self.loop.run_in_executor(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/usr/local/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.13/site-packages/botocore/client.py", line 569, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/botocore/client.py", line 1023, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NotAuthorizedException: An error occurred (NotAuthorizedException) when calling the InitiateAuth operation: Invalid Refresh Token.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/apyhiveapi/session.py", line 314, in hiveRefreshTokens
+    result = await self.auth.refresh_token(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.tokens.tokenData["refreshToken"]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/apyhiveapi/api/hive_auth_async.py", line 579, in refresh_token
+    raise HiveFailedToRefreshTokens from err
+apyhiveapi.helper.hive_exceptions.HiveFailedToRefreshTokens
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/apyhiveapi/session.py", line 291, in deviceLogin
+    result = await self.auth.device_login()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/apyhiveapi/api/hive_auth_async.py", line 441, in device_login
+    raise HiveInvalidDeviceAuthentication
+apyhiveapi.helper.hive_exceptions.HiveInvalidDeviceAuthentication
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/config_entries.py", line 762, in __async_setup_with_context
+    result = await component.async_setup_entry(hass, self)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/hive/__init__.py", line 42, in async_setup_entry
+    devices = await hive.session.startSession(hive_config)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/apyhiveapi/session.py", line 520, in startSession
+    await self.getDevices("No_ID")
+  File "/usr/local/lib/python3.13/site-packages/apyhiveapi/session.py", line 437, in getDevices
+    await self.hiveRefreshTokens()
+  File "/usr/local/lib/python3.13/site-packages/apyhiveapi/session.py", line 321, in hiveRefreshTokens
+    await self.deviceLogin()
+  File "/usr/local/lib/python3.13/site-packages/apyhiveapi/session.py", line 293, in deviceLogin
+    raise HiveInvalidDeviceAuthentication
+apyhiveapi.helper.hive_exceptions.HiveInvalidDeviceAuthentication
+2026-02-26 20:02:25.709 ERROR (MainThread) [metno] Access to https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/2.0/complete returned error 'ClientConnectorDNSError'
+2026-02-26 20:02:25.710 ERROR (MainThread) [homeassistant.components.met.coordinator] Error fetching met data: Update of data from the web site failed: 
+2026-02-28 10:38:22.645 ERROR (MainThread) [metno] Access to https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/2.0/complete returned error 'TimeoutError'
+2026-02-28 11:07:45.101 ERROR (MainThread) [homeassistant.components.homeassistant_alerts.coordinator] Timeout fetching homeassistant_alerts data
+2026-03-01 14:29:19.084 ERROR (MainThread) [metno] Access to https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/2.0/complete returned error 'TimeoutError'
+2026-03-03 09:47:18.106 ERROR (MainThread) [metno] Access to https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/2.0/complete returned error 'TimeoutError'
+2026-03-03 09:47:18.107 ERROR (MainThread) [homeassistant.components.met.coordinator] Error fetching met data: Update of data from the web site failed: 
+2026-03-05 10:10:33.108 ERROR (MainThread) [metno] Access to https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/2.0/complete returned error 'TimeoutError'
+2026-03-05 10:10:33.109 ERROR (MainThread) [homeassistant.components.met.coordinator] Error fetching met data: Update of data from the web site failed: 
+2026-03-05 11:06:03.107 ERROR (MainThread) [metno] Access to https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/2.0/complete returned error 'TimeoutError'
+2026-03-08 03:47:58.827 ERROR (MainThread) [metno] Access to https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/2.0/complete returned error 'TimeoutError'
+2026-03-08 03:47:58.827 ERROR (MainThread) [homeassistant.components.met.coordinator] Error fetching met data: Update of data from the web site failed: 
+2026-03-08 04:59:50.821 ERROR (MainThread) [metno] Access to https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/2.0/complete returned error 'TimeoutError'
+2026-03-12 10:33:10.536 ERROR (MainThread) [homeassistant.components.homeassistant_alerts.coordinator] Timeout fetching homeassistant_alerts data
+2026-03-14 04:20:50.000 WARNING (MainThread) [homeassistant.helpers.entity] Updating state for sun.sun (<class 'homeassistant.components.sun.entity.Sun'>) took 1954.881 seconds. Please create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+sun%22
+2026-03-14 07:56:09.249 ERROR (MainThread) [metno] Access to https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/2.0/complete returned error 'TimeoutError'
+2026-03-14 07:56:09.250 ERROR (MainThread) [homeassistant.components.met.coordinator] Error fetching met data: Update of data from the web site failed: 

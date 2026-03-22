@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.restore_state",
+  "data": [
+    {
+      "state": {"entity_id":"conversation.home_assistant","state":"unknown","attributes":{"friendly_name":"Home Assistant","supported_features":1},"last_changed":"2026-02-18T18:14:44.396938+00:00","last_reported":"2026-02-18T18:14:44.396938+00:00","last_updated":"2026-02-18T18:14:44.396938+00:00","context":{"id":"01KHRZCAXCMTANEXYTEFB9QT5W","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-03-22T08:01:22.546968+00:00"
+    },
+    {
+      "state": {"entity_id":"event.backup_automatic_backup","state":"unknown","attributes":{"event_types":["completed","failed","in_progress"],"event_type":null,"friendly_name":"Backup Automatic backup"},"last_changed":"2026-02-18T18:14:44.408631+00:00","last_reported":"2026-02-18T18:14:44.408631+00:00","last_updated":"2026-02-18T18:14:44.408631+00:00","context":{"id":"01KHRZCAXR56RG6PFQQ3GYCSMW","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": null,
+        "last_event_attributes": null
+      },
+      "last_seen": "2026-03-22T08:01:22.546968+00:00"
+    },
+    {
+      "state": {"entity_id":"person.admin","state":"unknown","attributes":{"editable":true,"id":"admin","device_trackers":[],"user_id":"660caf65985e4ab99cfca7d935e624d7","friendly_name":"admin"},"last_changed":"2026-02-18T18:14:44.640522+00:00","last_reported":"2026-02-18T18:14:50.293019+00:00","last_updated":"2026-02-18T18:14:50.293019+00:00","context":{"id":"01KHRZCGNND3Q6P5VG5HQVH9P7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-03-22T08:01:22.546968+00:00"
+    },
+    {
+      "state": {"entity_id":"tts.google_translate_en_com","state":"unknown","attributes":{"friendly_name":"Google Translate en com"},"last_changed":"2026-02-18T18:14:45.084746+00:00","last_reported":"2026-02-18T18:14:45.084746+00:00","last_updated":"2026-02-18T18:14:45.084746+00:00","context":{"id":"01KHRZCBJWR093HNQD4FZCYQ4B","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-03-22T08:01:22.546968+00:00"
+    }
+  ]
+}
